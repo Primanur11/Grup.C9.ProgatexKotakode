@@ -1,194 +1,260 @@
-/* Reset CSS (JANGAN DIHAPUS) */
-html, body,
-ul, ol, li,
-h1, h2, h3, h4, h5, h6, p, div {
-  margin: 0;
-  padding: 0;
-}
+@import url(https://fonts.googleapis.com/css?family=Cabin:700);
+
+
 
 body {
-  font-family: "Lucida Grande";
+  padding-top: 2em;
+  background-color: #315E8D;
 }
 
-li {
-  list-style: none;
+.circle-container {
+   
+	position: relative;
+	perspective: 1000;	
+	margin: 0 auto;	
+}
+		
+.circle-container:hover .circle {
+	transform: rotate3d(45, 45, 0, 180deg);
+}
+		
+.circle-container:hover .outer-ring {
+	transform: rotate3d(45, 0, 0, 180deg);
 }
 
-a {
-  text-decoration: none;
+.circle-container:hover .outer-outer-ring {
+	transform: rotate3d(0, 45, 0, 180deg);
+}
+		
+.circle-container, .front, .back {
+   
+	width: 175px;
+	height: 175px;
+	background-color: rgba(0,0,0,0);
+    margin-bottom: 2em;
+}
+		
+.circle, .outer-ring, .outer-outer-ring {
+   
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+		
+.circle {
+   
+	position: relative;
+	width: 175px;
+	height: 175px;
+    margin: 0 auto;
+}
+		
+.front, .back {
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+		
+.front {
+	background-color: #fff;
+	z-index: 2;
+}
+		
+.front p {
+	margin-top: 1.2em;
+	font-family: cabin, sans-serif;
+	font-weight: 700;
+	font-size: 3em;
+	text-align: center;
+	color: #315E8D;
+}
+		
+.back {
+	transform: rotate3d(45,45,0,180deg);
+	background-color: #fff;
+}
+		
+.back-logo {
+	width: 60%;
+	display: block;
+	margin: 0.7em auto;
+}
+		
+.outer-ring {
+   
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 195px;
+	height: 195px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 }
 
-/* Ketik code Anda bawah */
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
+.outer-outer-ring {
+   
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 211px;
+	height: 211px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 }
 
-.container {
-  width: 1170px;
-  margin: 0 auto;
+.toppart {
+   text-align: center;
+   background-color: white;
+   margin-bottom: 0.1em;
+   font-family: cabin, sans-serif;
+   color: #598DC5;
+   font-weight: 700;
+	font-size: 5em;
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+.slogan {
+   text-align: center;
+   background-color: white;
+   margin-bottom: 2em;
+   font-family: cabin, sans-serif;
+   color: #5E7082;
+   font-weight: 700;
+	font-size: 2em;
 }
 
-.top-wrapper p {
-  opacity: 0.7;
-  margin-bottom: 3px;
+.sloganadj {
+   text-align: center;
+   
+   margin-bottom: 2em;
+   font-family: cabin, sans-serif;
+   color: white;
+   font-weight: 700;
+	font-size: 2em;
+   padding-top: 25px;
+   padding-right:10px;
+   padding-left:10px;
 }
 
-.btn-wrapper {
-  margin: 20px 0;
+.health{
+   color: #5E7082;
 }
 
-.btn-wrapper p {
-  margin: 10px 0;
+.row {
+    text-align: center;
 }
 
-.signup {
-  background-color: #239b76;
+.whitetext {
+   color : white;
+   font-family: cabin, sans-serif;
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
+.slightlybigger {
+   font-size: 1.5em;
 }
 
-.twitter {
-  background-color: #55acee;
+.whiteback{
+   background-color: white;
 }
 
-.btn {
-  padding: 12px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
+.whenyouvisit {
+   padding-top: 25px;
 }
 
-.btn:hover {
-  opacity: 1;
+
+
+
+
+
+
+/*flipcard start*/
+.flitskaart {
+   background-color: #315E8D;
+   height: 150px;
+   width: 150px;
+   margin: auto;
+   border-radius: 20px;
+   
 }
 
-.fa {
-  margin-right: 5px;
+.flitskaart1 {
+   background-color: #315E8D;
+   height: 150px;
+   width: 150px;
+   margin: auto;
+   border-radius: 20px;
+   
 }
 
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  position: fixed;
-  top: 0;
-  z-index: 10;
+.flitskaart2 {
+   background-color: #315E8D;
+   height: 150px;
+   width: 150px;
+   margin: auto;
+   border-radius: 20px;
+   
 }
 
-.logo {
-  width: 124px;
-  margin-top: 20px;
+.flitskaart3 {
+   background-color: #315E8D;
+   height: 150px;
+   width: 150px;
+   margin: auto;
+   border-radius: 20px;
+   
 }
 
-.header-left {
-  float: left;
+.ptext{
+   font-size: 1.5em;
+   margin: auto;
+   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+   padding-left: 5px;
+   padding-right: 5px;
+}
+.ptext1{
+   font-size: 1.5em;
+   margin: auto;
+   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+   padding-left: 5px;
+   padding-right: 5px;
+}
+.ptext2{
+   font-size: 1.5em;
+   margin: auto;
+   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+   padding-left: 5px;
+   padding-right: 5px;
+}
+.ptext3{
+   font-size: 1.5em;
+   margin: auto;
+   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+   padding-left: 5px;
+   padding-right: 5px;
 }
 
-.header-right {
-  float: right;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.5s;
+.somepad{
+   padding: 30px;
 }
 
-.header-right:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
+/*flipcard end*/
 
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
+/*kontak vorm*/
+.cabin {
+   font-family: cabin, sans-serif;
 }
-
-.lesson-wrapper {
-  height: 500px;
-  padding-bottom: 80px;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-  color: white;
-}
-
-.txt-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 15px;
-  color: #b3aeb5;
-}
-
-.message-wrapper{
-  padding-bottom: 80px;
-  text-align: center;
-  border-bottom:1px solid #eee;
-}
-
-.message{
-  padding : 15px 40px ;
-  background-color: #5dca88; 
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active{
-  box-shadow: none;
-  position: relative;
-  top: 7px;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-footer img{
-  width:125px;
-}
-
-footer p{
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer{
-   padding-top: 30px;
-}
+/*kontak vorm*/
