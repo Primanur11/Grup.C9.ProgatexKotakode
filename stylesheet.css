@@ -113,7 +113,7 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.lesson-wrapper {
+.member-wrapper {
   height: 580px;
   padding-bottom: 80px;
   padding-left: 5%;
@@ -132,16 +132,16 @@ header {
   font-weight: normal;
 }
 
-.lesson {
+.member {
   float: left;
   width: 25%;
 }
 
-.lesson-icon {
+.member-icon {
   position: relative;
 }
 
-.lesson-icon p {
+.member-icon p {
   position: absolute;
   top: 44%;
   width: 100%;
